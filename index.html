@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI提案助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>AI提案助手</span>
+            </div>
+            
+            <div class="nav-categories">
+                <h3>提案分类</h3>
+                <ul>
+                    <li class="category-item active" data-category="innovation">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>技术创新</span>
+                    </li>
+                    <li class="category-item" data-category="process">
+                        <i class="fas fa-cogs"></i>
+                        <span>流程优化</span>
+                    </li>
+                    <li class="category-item" data-category="management">
+                        <i class="fas fa-chart-line"></i>
+                        <span>管理改进</span>
+                    </li>
+                    <li class="category-item" data-category="customer">
+                        <i class="fas fa-users"></i>
+                        <span>客户服务</span>
+                    </li>
+                    <li class="category-item" data-category="quality">
+                        <i class="fas fa-award"></i>
+                        <span>质量提升</span>
+                    </li>
+                    <li class="category-item" data-category="cost">
+                        <i class="fas fa-coins"></i>
+                        <span>成本控制</span>
+                    </li>
+                    <li class="category-item" data-category="safety">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>安全环保</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="quality-proposals">
+                <h3>优质提案</h3>
+                <div class="quality-item">
+                    <i class="fas fa-star"></i>
+                    <span>本月最佳</span>
+                </div>
+                <div class="quality-item">
+                    <i class="fas fa-trophy"></i>
+                    <span>季度优秀</span>
+                </div>
+                <div class="quality-item">
+                    <i class="fas fa-crown"></i>
+                    <span>年度卓越</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <!-- 顶部标题 -->
+            <header class="header">
+                <h1 id="category-title">技术创新提案</h1>
+                <p id="category-description">探索最新的技术创新提案，推动企业数字化转型</p>
+            </header>
+
+            <!-- AI对话机器人 -->
+            <section class="chat-section">
+                <div class="chat-header">
+                    <i class="fas fa-comments"></i>
+                    <h2>AI智能助手</h2>
+                </div>
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>您好！我是AI提案助手，可以帮您查询各类提案信息。请告诉我您需要什么帮助？</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chat-input" placeholder="输入您的问题或关键词...">
+                        <button id="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 提案展示区域 -->
+            <section class="proposals-section">
+                <div class="section-header">
+                    <h2>当前分类提案</h2>
+                    <div class="filter-options">
+                        <select id="sort-select">
+                            <option value="rating">按评分排序</option>
+                            <option value="date">按日期排序</option>
+                            <option value="title">按标题排序</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="proposals-grid" id="proposals-grid">
+                    <!-- 提案卡片将通过JavaScript动态生成 -->
+                </div>
+            </section>
+
+            <!-- 系统推荐提案 -->
+            <section class="recommendations-section">
+                <h2>系统推荐提案</h2>
+                <div class="recommendations-grid" id="recommendations-grid">
+                    <!-- 推荐提案将通过JavaScript动态生成 -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 提案详情模态框 -->
+    <div class="modal" id="proposal-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <!-- 提案详情内容将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
